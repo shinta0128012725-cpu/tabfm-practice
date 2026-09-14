@@ -1,0 +1,29 @@
+[project]
+name = "tabfm-practice"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "大島新太", email = "sh-oshima@brexa.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "safetensors>=0.8.0",
+    "tabfm[examples,pytorch]",
+    "xgboost>=3.4.1",
+]
+
+[project.scripts]
+tabfm-practice = "tabfm_practice:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "tabfm",
+]
+
+[tool.uv.sources]
+tabfm = { workspace = true, editable = true }
