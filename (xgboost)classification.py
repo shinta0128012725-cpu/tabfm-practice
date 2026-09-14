@@ -27,3 +27,4 @@ xgb_clf.fit(x_train, y_train_encoded)
 y_pred_xgb = xgb_clf.predict(x_test)
 acc_xgb = accuracy_score(y_test_encoded, y_pred_xgb)
 print("XGBoostの正解率:", acc_xgb)
+
